@@ -2,6 +2,8 @@
 
 A modern, accessible website for the Rural Alaska Community Action Program (RurAL CAP), built with Next.js 14, React 18, and Tailwind CSS v3.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fanna9891%2Fruralcap-website-redesign)
+
 ## 🌟 Features
 
 - **Modern Tech Stack**: Next.js 14 with App Router, React 18, TypeScript
