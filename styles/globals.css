@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Focus styles for accessibility */
+  *:focus {
+    @apply outline-none;
+  }
+
+  *:focus-visible {
+    @apply ring-2 ring-primary-500 ring-offset-2;
+  }
+
+  /* Skip to main content link */
+  .skip-link {
+    @apply absolute left-0 top-0 bg-primary-600 text-white px-4 py-2 z-50 -translate-y-full focus:translate-y-0 transition-transform duration-200;
+  }
+
+  /* Ensure proper text contrast */
+  body {
+    @apply text-neutral-900 bg-white;
+  }
+
+  /* Heading hierarchy */
+  h1 {
+    @apply text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+
+  h4 {
+    @apply text-xl font-medium;
+  }
+
+  h5 {
+    @apply text-lg font-medium;
+  }
+
+  h6 {
+    @apply text-base font-medium;
+  }
+
+  /* Link styles */
+  a {
+    @apply text-primary-600 hover:text-primary-700 underline;
+  }
+
+  /* Form elements */
+  input,
+  textarea,
+  select {
+    @apply border-neutral-300 focus:border-primary-500 focus:ring-primary-500;
+  }
+
+  /* Button base styles */
+  button {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  /* Primary button */
+  .btn-primary {
+    @apply bg-primary-600 text-white px-6 py-3 rounded-md font-medium hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200;
+  }
+
+  /* Secondary button */
+  .btn-secondary {
+    @apply bg-white text-primary-600 px-6 py-3 rounded-md font-medium border-2 border-primary-600 hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200;
+  }
+
+  /* Card component */
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200;
+  }
+
+  /* Container */
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  /* Section spacing */
+  .section {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  /* Accessible form label */
+  .form-label {
+    @apply block text-sm font-medium text-neutral-700 mb-1;
+  }
+
+  /* Error message */
+  .error-message {
+    @apply text-red-600 text-sm mt-1;
+  }
+
+  /* Success message */
+  .success-message {
+    @apply text-green-600 text-sm mt-1;
+  }
+
+  /* Loading spinner */
+  .spinner {
+    @apply animate-spin h-5 w-5 text-primary-600;
+  }
+
+  /* Screen reader only text */
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+  }
+}
+
+@layer utilities {
+  /* Custom animation delays */
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  /* Text balance for better readability */
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    @apply text-black bg-white;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  a {
+    @apply text-black no-underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn-primary {
+    @apply border-2 border-white;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-black;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

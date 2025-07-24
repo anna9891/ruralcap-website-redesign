@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal for Website Restructure - RurAL CAP</title>
+    <style>
+        @media print {
+            body { margin: 0.5in; }
+            .page-break { page-break-before: always; }
+            .header { margin-bottom: 0.2in; }
+            .section { margin: 0.15in 0; }
+            p { 
+                margin: 0.05in 0;
+                orphans: 2;
+                widows: 2;
+                text-align: justify;
+                text-justify: inter-word;
+            }
+            h1 { margin: 0.2in 0; color: #1e3a8a !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            h2 { margin: 0.15in 0; color: #1e3a8a !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            h3 { color: #1e3a8a !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            ul { margin: 0.1in 0 0.1in 0.3in; }
+            li { 
+                margin: 0.05in 0;
+                text-align: justify;
+                text-justify: inter-word;
+            }
+            table { page-break-inside: auto; }
+            tr { page-break-inside: auto; }
+            .demo-section { 
+                background-color: #eff6ff !important; 
+                border: 2px solid #3b82f6 !important;
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact; 
+            }
+            .price-breakdown { page-break-inside: auto; }
+            .company-info { page-break-before: auto; }
+            .customer-references { page-break-before: auto; }
+            th { 
+                background-color: #dbeafe !important; 
+                color: #1e3a8a !important;
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact; 
+            }
+            .highlight-box {
+                background-color: #eff6ff !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 40px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #1e3a8a;
+        }
+        
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #1e3a8a;
+            margin: 20px 0;
+        }
+        
+        h2 {
+            color: #1e3a8a;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        h3 {
+            color: #1e3a8a;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #1e3a8a;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #dbeafe;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            color: #1e3a8a;
+        }
+        
+        .price-cell {
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        .demo-section {
+            border: 2px solid #3b82f6;
+            border-radius: 10px;
+            padding: 15px;
+            background-color: #eff6ff;
+            margin: 20px 0;
+        }
+        
+        .demo-link {
+            font-size: 110%;
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+        
+        .references-table {
+            margin-top: 20px;
+            font-size: 85%;
+        }
+        
+        .references-table td {
+            white-space: nowrap;
+            padding: 8px 6px;
+        }
+        
+        .signature-line {
+            border-bottom: 1px solid #000;
+            width: 300px;
+            margin: 20px 0 5px 0;
+            display: inline-block;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+        
+        p {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        li {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        .highlight-box {
+            background-color: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="concourse-logo.png" alt="Concourse Logo" class="logo">
+        <p>
+            Concourse Tech Inc. d/b/a Concourse<br>
+            Kelsey Shaner, Operations Manager<br>
+            Thursday, July 24, 2025
+        </p>
+        <h1>Proposal for Website Restructure</h1>
+        <p><strong>The Rural Alaska Community Action Program, Inc.</strong><br>
+        <strong>Concourse Proposal #:</strong> 149035<br>
+        <strong>RFP Reference:</strong> RurAL CAP-HQ-25-R-011<br>
+        <strong>Submitted To:</strong> Darrel Behymer, CPP<br>
+        <strong>Submitted By:</strong> Concourse Tech Inc.</p>
+    </div>
+
+    <div class="section">
+        <p>Dear Darrel Behymer,</p>
+        <p>Thank you for the opportunity to respond to RurAL CAP&apos;s Request for Proposal for Website Restructure services. Concourse is excited to present our comprehensive solution that will transform your digital presence and better serve rural Alaska communities.</p>
+    </div>
+
+    <div class="demo-section">
+        <h3>Live Demo</h3>
+        <p>Experience our proposed website restructure solution firsthand:</p>
+        <p><a href="https://ruralcap-redesign.vercel.app" class="demo-link" target="_blank">https://ruralcap-redesign.vercel.app</a></p>
+        <p>This interactive prototype demonstrates our approach to organizing your programs, resources, and services with an intuitive, accessible design tailored for rural Alaska communities.</p>
+    </div>
+
+    <div class="section">
+        <h2>Understanding Your Mission</h2>
+        <p>RurAL CAP has been improving the quality of life for low-income Alaskans since 1965. As a statewide nonprofit with a 24-member Board representing every region of Alaska, your organization delivers innovative, community-driven solutions across Education, Housing, and Health & Well-Being programs. Our proposed website restructure will amplify your mission by creating a digital platform that truly serves your diverse stakeholders - from program participants to staff members across the state.</p>
+    </div>
+
+    <div class="section">
+        <h2>Technical Approach</h2>
+        <p>Our solution addresses all requirements specified in your RFP through a modern, user-centered approach:</p>
+        
+        <h3>Website Restructure Implementation</h3>
+        <ul>
+            <li><strong>Comprehensive Project Management:</strong> Dedicated project manager with weekly progress updates and milestone tracking</li>
+            <li><strong>Site Architecture Optimization:</strong> Implementation of your provided sitemap with best practices for navigation and user experience</li>
+            <li><strong>Content Migration & Organization:</strong> Professional editing and upload of all provided content with intuitive categorization</li>
+            <li><strong>Dynamic Program Landing Pages:</strong> Template-based system allowing easy creation and management of program-specific pages</li>
+            <li><strong>Tiered Permission System:</strong> Role-based access control enabling program leads to manage their own content securely</li>
+            <li><strong>Comprehensive Staff Training:</strong> Live training sessions with recorded materials for future reference</li>
+        </ul>
+
+        <h3>Key Features Development</h3>
+        
+        <div class="highlight-box">
+            <h4>Program Pages Include:</h4>
+            <ul>
+                <li>Rich program descriptions with logo integration</li>
+                <li>Interactive story maps for community engagement</li>
+                <li>Program-specific event calendars with filtering</li>
+                <li>Integrated interest and intake forms</li>
+                <li>Online appointment scheduling system</li>
+            </ul>
+        </div>
+
+        <h3>Resource Library System</h3>
+        <p>Our advanced resource library provides powerful search and filtering capabilities:</p>
+        <ul>
+            <li>Filter by program affiliation (Education, Housing, Health & Well-Being)</li>
+            <li>Topic-based categorization for easy discovery</li>
+            <li>Document type filtering (PDFs, forms, guides, videos)</li>
+            <li>Full-text search functionality</li>
+            <li>Access level controls for sensitive materials</li>
+        </ul>
+
+        <h3>Events Management</h3>
+        <p>Program-specific event calendars featuring:</p>
+        <ul>
+            <li>Calendar widgets embedded on program pages</li>
+            <li>Category-based filtering</li>
+            <li>Upcoming events ticker</li>
+            <li>Registration integration</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Technical Specifications</h2>
+        <ul>
+            <li><strong>Platform:</strong> Modern content management system with headless architecture</li>
+            <li><strong>Accessibility:</strong> WCAG 2.1 AA compliant design ensuring access for all Alaskans</li>
+            <li><strong>Mobile Optimization:</strong> Responsive design for rural areas with limited connectivity</li>
+            <li><strong>Security:</strong> SSL encryption, regular security updates, and GDPR compliance</li>
+            <li><strong>Performance:</strong> Optimized for fast loading even on slower connections</li>
+            <li><strong>Branding:</strong> Full integration of RurAL CAP visual identity</li>
+            <li><strong>Logo Recreation:</strong> Professional recreation of your logo as an editable Illustrator file</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Project Timeline</h2>
+        <table>
+            <tr>
+                <th>Phase</th>
+                <th>Activities</th>
+                <th>Duration</th>
+            </tr>
+            <tr>
+                <td><strong>Discovery & Planning</strong></td>
+                <td>Requirements gathering, sitemap review, content audit</td>
+                <td>Week 1-2</td>
+            </tr>
+            <tr>
+                <td><strong>Design & Development</strong></td>
+                <td>Template creation, CMS setup, feature development</td>
+                <td>Week 3-6</td>
+            </tr>
+            <tr>
+                <td><strong>Content Migration</strong></td>
+                <td>Content upload, organization, and optimization</td>
+                <td>Week 7-8</td>
+            </tr>
+            <tr>
+                <td><strong>Testing & Training</strong></td>
+                <td>Quality assurance, staff training, documentation</td>
+                <td>Week 9-10</td>
+            </tr>
+            <tr>
+                <td><strong>Launch & Support</strong></td>
+                <td>Go-live, monitoring, post-launch support</td>
+                <td>Week 11-12</td>
+            </tr>
+        </table>
+        <p><strong>Target Completion:</strong> September 30, 2025</p>
+    </div>
+
+    <div class="section">
+        <h2>Price and Quantity Breakdown</h2>
+        <table class="price-breakdown">
+            <tr>
+                <th>Service Component</th>
+                <th>Description</th>
+                <th>Investment</th>
+            </tr>
+            <tr>
+                <td><strong>Website Restructure & Development</strong></td>
+                <td>Complete website rebuild including all program pages, templates, and core functionality</td>
+                <td class="price-cell">$24,500</td>
+            </tr>
+            <tr>
+                <td><strong>Resource Library System</strong></td>
+                <td>Advanced filtering, search, and categorization system</td>
+                <td class="price-cell">$8,500</td>
+            </tr>
+            <tr>
+                <td><strong>Events Calendar Integration</strong></td>
+                <td>Program-specific calendars with registration capabilities</td>
+                <td class="price-cell">$6,000</td>
+            </tr>
+            <tr>
+                <td><strong>Content Migration & Organization</strong></td>
+                <td>Professional content editing, upload, and optimization</td>
+                <td class="price-cell">$7,500</td>
+            </tr>
+            <tr>
+                <td><strong>Staff Training & Documentation</strong></td>
+                <td>Comprehensive training sessions with recorded materials</td>
+                <td class="price-cell">$3,500</td>
+            </tr>
+            <tr>
+                <td><strong>Logo Recreation</strong></td>
+                <td>Professional Illustrator file creation</td>
+                <td class="price-cell">$1,500</td>
+            </tr>
+            <tr>
+                <th colspan="2" class="price-cell">Total Project Investment</th>
+                <th class="price-cell">$51,500</th>
+            </tr>
+        </table>
+        
+        <h3>Optional Ongoing Services</h3>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+                <th>Monthly</th>
+                <th>Annual</th>
+            </tr>
+            <tr>
+                <td><strong>Managed Hosting</strong></td>
+                <td>Premium hosting with 99.9% uptime, daily backups, SSL</td>
+                <td class="price-cell">$395</td>
+                <td class="price-cell">$4,740</td>
+            </tr>
+            <tr>
+                <td><strong>Maintenance & Support</strong></td>
+                <td>Monthly updates, security patches, 8 hours of support</td>
+                <td class="price-cell">$795</td>
+                <td class="price-cell">$9,540</td>
+            </tr>
+            <tr>
+                <td><strong>Content Management</strong></td>
+                <td>Regular content updates, event posting, resource uploads</td>
+                <td class="price-cell">$1,200</td>
+                <td class="price-cell">$14,400</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Why Choose Concourse</h2>
+        <ul>
+            <li><strong>Government Experience:</strong> Proven track record with state and municipal organizations</li>
+            <li><strong>Accessibility Expertise:</strong> Deep understanding of WCAG compliance and inclusive design</li>
+            <li><strong>Rural Connectivity:</strong> Specialized experience optimizing for low-bandwidth environments</li>
+            <li><strong>Cultural Sensitivity:</strong> Respectful approach to indigenous and diverse communities</li>
+            <li><strong>Comprehensive Training:</strong> Commitment to empowering your staff with lasting skills</li>
+            <li><strong>Long-term Partnership:</strong> Ongoing support options to ensure continued success</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Project Deliverables</h2>
+        <ol>
+            <li>Fully restructured website with all requested features</li>
+            <li>Content management system with tiered permissions</li>
+            <li>Resource library with advanced filtering</li>
+            <li>Program-specific event calendars</li>
+            <li>Online forms and appointment scheduling</li>
+            <li>Mobile-responsive design</li>
+            <li>Staff training materials and recordings</li>
+            <li>Technical documentation</li>
+            <li>Recreated logo in Illustrator format</li>
+            <li>30-day post-launch support</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Implementation Process</h2>
+        <p>Our proven implementation methodology ensures project success:</p>
+        
+        <h3>Discovery Phase</h3>
+        <ul>
+            <li>Stakeholder interviews to understand all user needs</li>
+            <li>Content audit and information architecture planning</li>
+            <li>Technical requirements documentation</li>
+            <li>Branding and design guidelines review</li>
+        </ul>
+        
+        <h3>Development Phase</h3>
+        <ul>
+            <li>Iterative development with regular client reviews</li>
+            <li>User testing with program representatives</li>
+            <li>Accessibility testing at each milestone</li>
+            <li>Performance optimization for rural connectivity</li>
+        </ul>
+        
+        <h3>Training & Launch</h3>
+        <ul>
+            <li>Role-specific training for different staff levels</li>
+            <li>Hands-on practice sessions</li>
+            <li>Quick reference guides and video tutorials</li>
+            <li>Soft launch with select programs before full rollout</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Compliance and Certification</h2>
+        <p>Concourse Tech Inc. maintains all required insurance and certifications:</p>
+        <ul>
+            <li>Workers Compensation: $500,000+ per occurrence</li>
+            <li>Commercial General Liability: $1,000,000+ per occurrence</li>
+            <li>Automobile Liability: $1,000,000+ per occurrence</li>
+            <li>Current Alaska Business License</li>
+            <li>Additional Insured endorsement for RurAL CAP</li>
+            <li>Waiver of subrogation in favor of RurAL CAP</li>
+        </ul>
+        
+        <p>Concourse Tech Inc. is a technology services company specializing in digital transformation for government and nonprofit organizations. We bring proven expertise in creating accessible, user-friendly websites that serve diverse communities effectively.</p>
+        
+        <p>Thank you for considering Concourse for your website restructure project. We look forward to partnering with RurAL CAP to create a digital platform that truly serves rural Alaska communities. Our team is ready to begin immediately upon contract award to meet your September 30, 2025 deadline.</p>
+    </div>
+
+    <div class="section page-break">
+        <h2>Company Information</h2>
+        <table>
+            <tr>
+                <td><strong>Company Name</strong></td>
+                <td>Concourse Tech Inc. d/b/a Concourse</td>
+            </tr>
+            <tr>
+                <td><strong>Contact Person</strong></td>
+                <td>Kelsey Shaner, Operations Manager</td>
+            </tr>
+            <tr>
+                <td><strong>Email</strong></td>
+                <td>kelsey@concoursetech.com</td>
+            </tr>
+            <tr>
+                <td><strong>Phone</strong></td>
+                <td>1-800-CONCOURSE</td>
+            </tr>
+            <tr>
+                <td><strong>Address</strong></td>
+                <td>123 Technology Way, Suite 100<br>San Francisco, CA 94105</td>
+            </tr>
+            <tr>
+                <td><strong>Website</strong></td>
+                <td>www.concoursetech.com</td>
+            </tr>
+        </table>
+
+        <h2>Customer References</h2>
+        <table class="references-table">
+            <tr>
+                <th>Organization</th>
+                <th>Contact Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+            <tr>
+                <td>Collegium Charter School</td>
+                <td>Erik Daniele</td>
+                <td>edaniele@ccs.us</td>
+                <td>(610) 903-1300</td>
+            </tr>
+            <tr>
+                <td>State of Texas - Teachers Retirement System</td>
+                <td>Trevor Goodman</td>
+                <td>Trevor.Goodman@trs.texas.gov</td>
+                <td>(512) 542-6771</td>
+            </tr>
+            <tr>
+                <td>Orange County Superintendent of Schools, CA</td>
+                <td>Tristan Mejias</td>
+                <td>TMejias@ocde.us</td>
+                <td>(714) 966-4081</td>
+            </tr>
+            <tr>
+                <td>City of Colorado Springs</td>
+                <td>Erica Rush</td>
+                <td>erica.rush@coloradosprings.gov</td>
+                <td>(719) 385-5755</td>
+            </tr>
+            <tr>
+                <td>Maryland Health Benefit Exchange</td>
+                <td>Tracey Gamble</td>
+                <td>tracey.gamble1@maryland.gov</td>
+                <td>(410) 547-8152</td>
+            </tr>
+        </table>
+
+        <h2>Contract Terms and Conditions</h2>
+        <p><strong>Quote Terms and Conditions:</strong> A Quote is not an order or offer to sell. Product, available inventory, additional fees and pricing data are updated by manufacturers from time to time and may change without notice.</p>
+        <p><strong>Warranties Disclaimer:</strong> Concourse Tech Inc. does not make any warranties, express or implied, including but not limited to warranties of merchantability or fitness for a particular purpose.</p>
+        <p><strong>Force Majeure:</strong> Concourse Tech Inc. shall not be responsible for delays or failure to deliver due to circumstances beyond its reasonable control, including but not limited to acts of God, natural disasters, labor disputes, supply chain disruptions.</p>
+        <p><strong>Financing Assignments:</strong> For select high-value orders, we may request the buyer to assign the receivable to one of our financing partners.</p>
+        <p><strong>Final Agreement:</strong> The terms and conditions of this Quote, including payment and delivery terms, are subject to final agreement upon issuance and acceptance of a purchase order.</p>
+    </div>
+
+    <div class="section page-break">
+        <h2>Acceptance</h2>
+        <p>By signing below, both parties agree to the terms, conditions, and pricing outlined in this proposal.</p>
+        
+        <div style="margin-top: 30px; display: flex; justify-content: space-between; align-items: flex-start;">
+            <div style="width: 48%;">
+                <p><strong>Client Acceptance:</strong></p>
+                <div class="signature-line"></div>
+                <p style="margin: 5px 0;">Signature</p>
+                <div class="signature-line"></div>
+                <p style="margin: 5px 0;">Print Name</p>
+                <div class="signature-line"></div>
+                <p style="margin: 5px 0;">Date</p>
+            </div>
+            
+            <div style="width: 48%;">
+                <p><strong>Concourse Tech Inc.:</strong></p>
+                <div class="signature-line"></div>
+                <p style="margin: 5px 0;">Signature</p>
+                <div class="signature-line"></div>
+                <p style="margin: 5px 0;">Print Name</p>
+                <div class="signature-line"></div>
+                <p style="margin: 5px 0;">Date</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
